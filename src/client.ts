@@ -1,5 +1,5 @@
 import EventEmitter from "eventemitter3";
-import { PublicKey } from "@solana/web3.js";
+import { PublicKey } from "@trezoa/web3.js";
 import { UtlConfig } from "./config/utl-config";
 import { fetchTokensBackend, fetchTokensCdn, fetchTokensMetaplex, searchTokensBackend } from "./api/";
 import { publicKeysToMap } from "./utils";
@@ -23,11 +23,11 @@ export default class Client extends EventEmitter {
     const fetchedPubkeys = publicKeysToMap(tokenlist.map((token) => new PublicKey(token.address)));
     const mintsNotFetched = mints.filter((mint) => !fetchedPubkeys[mint.toString()]);
 
-    const metaplex = await this.getFromMetaplex(mintsNotFetched, (metaplexPartial) => {
+    const trezoaplex = await this.getFromMetaplex(mintsNotFetched, (metaplexPartial) => {
       this.emit('tokens', { tokens: [ ...tokenlist, ...metaplexPartial ], source: UTLSource.CHAIN });
     });
 
-    const data = [ ...tokenlist, ...metaplex ];
+    const data = [ ...tokenlist, ...trezoaplex ];
 
     this.emit('tokens', { tokens: data, source: UTLSource.METADATA });
 

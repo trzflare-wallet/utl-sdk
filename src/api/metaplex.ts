@@ -1,14 +1,14 @@
-import { Metaplex, Nft } from "@metaplex-foundation/js";
-import { TokenStandard } from "@metaplex-foundation/mpl-token-metadata";
-import { Connection, PublicKey } from "@solana/web3.js";
+import { Trezoaplex, Nft } from "@trezoaplex-foundation/js";
+import { TokenStandard } from "@trezoaplex-foundation/tpl-token-metadata";
+import { Connection, PublicKey } from "@trezoa/web3.js";
 import { transformMetaplexToken } from "../transformers";
 import { Token, UTLOnAccountsLoadedCallback } from '../types';
 import { UtlConfig } from "../config/utl-config";
 import { getMultipleAccounts } from "../utils";
 
 const getNftMetadata = async (connection: Connection, mints: PublicKey[]) => {
-  const metaplex = new Metaplex(connection);
-  const nfts = await metaplex.nfts().findAllByMintList(mints);
+  const trezoaplex = new Trezoaplex(connection);
+  const nfts = await trezoaplex.nfts().findAllByMintList(mints);
   return nfts.filter((nft) => nft?.tokenStandard === TokenStandard.Fungible) as Nft[];
 }
 

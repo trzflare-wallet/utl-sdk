@@ -1,12 +1,12 @@
 const { Client, UtlConfig } = require('..');
-const { Connection, PublicKey } = require('@solana/web3.js');
+const { Connection, PublicKey } = require('@trezoa/web3.js');
 
 const config = new UtlConfig({
   chainId: 101,
-  connection: new Connection('https://api.mainnet-beta.solana.com/'),
+  connection: new Connection('https://api.mainnet-beta.trezoa.com/'),
   // timeout: 2000,
   // apiUrl: "https://utl-api-63nna7yega-ew.a.run.app",
-  // cdnUrl: "https://cdn.jsdelivr.net/gh/solflare-wallet/token-list/solana-tokenlist.json"
+  // cdnUrl: "https://cdn.jsdelivr.net/gh/trzflare-wallet/token-list/trezoa-tokenlist.json"
 });
 
 const mintsToFetch = [

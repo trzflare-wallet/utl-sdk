@@ -1,7 +1,7 @@
 import { Token, UTLCdnTokenList } from "../types";
 import axios from "axios";
 import { publicKeysToMap } from "../utils";
-import { PublicKey } from "@solana/web3.js";
+import { PublicKey } from "@trezoa/web3.js";
 import { UtlConfig } from "../config/utl-config";
 
 const downloadTokenlist = async (cdnUrl): Promise<UTLCdnTokenList | null> => {

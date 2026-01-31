@@ -1,12 +1,12 @@
 {
-  "name": "@solflare-wallet/utl-sdk",
+  "name": "@trzflare-wallet/utl-sdk",
   "version": "1.4.0",
   "description": "",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "scripts": {
     "build:esm": "tsc",
-    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:cjs": "tsc --trezoa tsconfig.cjs.json",
     "build": "npm run build:esm && npm run build:cjs",
     "test": "npm run build && node test/index.js",
     "deploy": "npm run build && npm publish --access public"
@@ -14,19 +14,19 @@
   "files": [
     "lib/"
   ],
-  "author": "Solflare Developers <developers@solflare.com>",
+  "author": "Solflare Developers <developers@trzflare.com>",
   "license": "ISC",
   "peerDependencies": {
-    "@solana/web3.js": "*"
+    "@trezoa/web3.js": "*"
   },
   "dependencies": {
-    "@metaplex-foundation/js": "0.11.7",
+    "@trezoaplex-foundation/js": "0.11.7",
     "axios": "^0.27.2",
     "eventemitter3": "^5.0.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@solana/web3.js": "^1.42.0",
+    "@trezoa/web3.js": "^1.42.0",
     "typescript": "^4.6.4"
   }
 }

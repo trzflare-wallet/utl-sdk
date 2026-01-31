@@ -1,4 +1,4 @@
-import { PublicKey } from "@solana/web3.js";
+import { PublicKey } from "@trezoa/web3.js";
 import axios from "axios";
 import { SearchOptions, Token, UTLApiResponse } from "../types";
 import { UtlConfig } from "../config/utl-config";
