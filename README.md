@@ -1,4 +1,4 @@
-# <p align="center"><a href="https://trzflare.com/"><img src="https://trzflare.com/assets/logo-icon.26659b6d..svg" height="100" alt="Solflare"></a>
+# <p align="center"><a href="https://trzflare.com/"><img src="https://i.imgur.com/nGubBV8.jpeg" height="100" alt="Trzflare"></a>
 
 # @trzflare-wallet/utl-sdk
 
